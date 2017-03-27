@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>NEC Nellore | MCA Department</title>
+
+	<!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/assets/favicon.png" />
+	
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body data-ng-app="schoolApp" data-ng-controller="MainController">
+	<div id="pageloader">
+		<div class="pageloader">
+			<div class="thecube">
+				<div class="cube c1"></div>
+				<div class="cube c2"></div>
+				<div class="cube c4"></div>
+				<div class="cube c3"></div>
+			</div>
+
+			<div class="textedit">
+				<span class="site-name">NEC Nellore | MCA Department</span>
+				<span class="site-tagline">2014-17 Batch creation</span>
+			</div>	
+		</div><!-- .pageloader -->
+	</div><!-- #pageloader -->
+
+	<div id="wrapper">
+		<header id="header" class="site-header">
+			<div class="mid-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-8">
+							<div class="site-brand">
+								<a class="logo" href="index.html">
+									<img src="images/assets/logo.png" alt="NECN" />
+								</a>
+							</div><!-- .site-brand -->
+						</div>
+
+						<div class="col-md-9 col-sm-6 col-xs-4">
+							<nav class="main-menu">
+								<span class="mobile-btn"><i class="fa fa-bars"></i></span>
+								<ul>									
+									<li><a href="about.html">About</a></li>
+									<li class="current-menu-item"><a href="StaffDetails2.html">Staff</a>
+										<ul class="sub-menu">
+										    <li><a href="StaffDetails2.html">View Staff Images</a></li>
+											<li class="current-menu-item"><a href="StaffFullDetails.html">View Staff Details</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+						
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .mid-header -->
+		</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+			<div class="page-title parallax-window" data-parallax="scroll" data-image-src="images/placeholder/about-title.jpg">
+				<div class="container">
+					<h1>About Us</h1>
+					<div class="breadcrumb">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><span class="current">About Us</span></li>
+						</ul>
+					</div><!-- .breadcrumb -->
+				</div><!-- .container -->
+			</div><!-- .page-title -->
+
+			<main id="main" class="site-main">
+				<section id="our-university">
+					<div class="container">
+
+						<div class="row intro-wrap">
+							<div class="col-md-10 info">
+								<h3 class="title">Staff Full Details</h3>
+								
+					<div class="table-responsive courses-table">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th><h4 align="center">ID No.</h4></th>
+									<th><h4 align="center">Staff Name</h4></th>
+									<th><h4 align="center">Gender</h4></th>
+									<th><h4 align="center">Branch</h4></th>
+									<th><h4 align="center">Joined Year</h4></th>
+									<th><h4 align="center">Mobile</h4></th>
+									<th><h4 align="center">Mail Id</h4></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-ng-repeat="staff in allAdminstaff | filter:inputSearch">
+									<td align="center">{{staff.staffId}}</td>
+									<td align="center">{{staff.staffName}}</td>
+									<td align="center">{{staff.gender}}</td>
+									<td align="center">{{staff.branch}}</td>
+									<td align="center">{{staff.year}}</td>
+									<td align="center">{{staff.mobile}}</td>
+									<td align="center">{{staff.email}}</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					
+							</div>
+							<div class="col-md-2 thumb">
+							
+							    <div class="team">
+									<div class="thumb">
+										<img src="images/placeholder/team1.png" alt="" />
+										<div class="thumb-info">
+											<div class="socials">
+												<ul>
+													<li><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+													<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+													<li><a href="#" target="_blank"><i class="fa fa-facebook "></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="info">
+										<span class="name">Peter Hart</span>
+										<span class="job">Economic professor</span>
+									</div> -->
+								</div>
+							</div>
+						</div><!-- .intro-wrap -->
+
+						<!-- <div class="row intro-wrap left-thumb">
+							<div class="col-md-6 info">
+								<h3 class="title">Mission & Vision</h3>
+								<p><b>Mission :</b> Our mission is to inculcate technical knowledge through effective teaching – learning process creating a community of learning with due considerations for ethical and social responsibilities. </p>
+							    <p><b>Vision :</b> We at Narayana Engineering College, Nellore will strive continuously for excellence in education by providing best possible education facilities and creative atmosphere. Through our sincere and planned hard work will attain academic integrity and intellectual excellence. </p>
+							</div>
+							<div class="col-md-6 thumb">
+								<img src="images/placeholder/about2.jpg" alt="" />
+							</div>
+						</div> -->
+					</div><!-- .container -->
+				</section><!-- #our-university -->
+				
+			</main><!-- .site-main -->
+		</div><!-- .site-content -->
+
+		<div id="bottom" class="site-bottom">
+			<div class="container">
+				<div class="footer-widget bottom1">
+					<div class="row">
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">About JNTUA</h3>
+								<div class="text-widget">
+									<p>Jawaharlal Nehru Technological University, Anantapur is a state university in Anantapur, Andhra Pradesh, India.<br>
+                                       <b><u>Address:</u></b> Saradha Nagar, Anantapur, Andhra Pradesh 515002<br> <b><u>Phone:</u></b> 085542 72438<br> <b><u>Founded:</u></b> 1946</p>
+								</div>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">All Courses</h3>
+								<ul>
+									<li>PG Studies</li>
+									<li>M. Tech</li>
+									<li>B. Tech</li>
+								</ul>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">Our Socials</h3>
+								<p>Follow our sosials in facebook and twitter </p>
+								<div class="socials">
+									<ul>
+										<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									</ul>
+								</div>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget contact-widget">
+								<h3 class="widget-title">Contact Us</h3>
+								<ul>
+									<li class="address">Off NH-5, Muthukur Road, A.K. Nagar, Near Apollo Hospital, Nellore, Andhra Pradesh 524004</li>
+									<li class="mobile">0861 231 3843</li>
+									<li class="email">narayananec@gmail.com</li>
+									<li class="time-work">Mon - Sat :- 9.00 am - 4.00 pm</li>
+								</ul>
+							</div><!-- .widget -->
+						</div>
+					</div>
+				</div><!-- .bottom1 -->
+				
+			</div><!-- .container -->
+		</div><!-- .site-bottom -->
+
+		<footer id="footer" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="copyright">
+							<p>Copyright © 2016 University.</p>
+						</div><!-- .copyright -->
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<nav class="nav-footer">
+							<ul>
+								<!-- <li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Disclaimer</a></li> -->
+								<li><a href="#">Feedback</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div><!-- .container -->
+		</footer><!-- .site-footer -->
+	</div><!-- #wrapper -->
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+
+	<!-- jQuery -->    
+    <script src="js/jquery-1.11.3.js"></script>
+    <!-- Boostrap -->
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <!-- Jquery Parallax -->
+    <script src="js/vendor/parallax.min.js"></script>
+    <!-- jQuery UI -->
+	<script src="js/vendor/jquery-ui.min.js"></script>
+	<!-- jQuery Sticky -->
+	<script src="js/vendor/jquery.sticky.js"></script>
+	<!-- OWL CAROUSEL Slider -->    
+    <script src="js/vendor/owl.carousel.js"></script>
+    <!-- PrettyPhoto -->   
+    <script src="js/vendor/jquery.prettyPhoto.js"></script>
+    <!-- Jquery Isotope -->
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <!-- Main -->
+        
+    <script src="js/main.js"></script><script src="js/angularjs/school.studentservice.js"></script>
+	<script src="js/angularjs/school.route.js"></script>
+	<script src="js/angularjs/school.studentcontroller.js"></script>
+    
+</body>
+</html>

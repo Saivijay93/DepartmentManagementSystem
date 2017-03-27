@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>NEC Nellore | MCA Department</title>
+
+<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link rel="shortcut icon" type="image/png" href="images/assets/favicon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/stylelogin.css" />
+</head>
+
+<body data-ng-app="schoolApp" data-ng-controller="MainController">
+     <section id="login">
+     <div class="container">
+    	<div class="row">
+    	    <div class="col-lg-12">
+        	    <div class="form-wrap">
+                <h1>Staff members are Login with your Id No. and Password</h1>
+                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="idno" class="sr-only">Staff</label>
+                            <!-- <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com"> -->
+                            <input type="text" name="idno" required
+								class="form-control input-md" id="idno"
+								data-ng-model="signinstaffForm.idno" placeholder="Id Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <!-- <input type="password" name="key" id="key" class="form-control" placeholder="Password"> -->
+                           <input type="password" name="password" required
+								class="form-control input-md" id="password"
+								data-ng-model="signinstaffForm.password" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <span class="character-checkbox" onclick="showPassword()"></span>
+                            <span class="label">Show password</span>
+                            <span class="label">  </span>
+                            <span class="label"><a href="StaffRegistration.html"><b>Staff Signup</b></a></span>
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" data-ng-click="signinStaff(signinstaffForm)"
+                            value="Log in">
+                        <!-- <button data-ng-disabled="!myForm.$valid" type="submit" class="button primary rounded large full"
+							data-ng-click="registerAdmin(adminLogin)" data-toggle="modal" data-target="#modal-1">Login</button> -->
+								
+                    </form>
+                    <!-- <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a> -->
+                    <b><a href="StaffRecovery.html" class="forget">Forgot password</a></b>
+                    <hr>
+        	    </div>
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+    </section>
+    
+    
+<div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title">Recovery password</h4>
+			</div>
+			<div class="modal-body">
+				<p>Type your email account</p>
+				<input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-custom">Recovery</button>
+			</div>
+		</div> <!-- /.modal-content -->
+	</div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Page © - 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+function showPassword() {
+    
+    var key_attr = $('#password').attr('type');
+    
+    if(key_attr != 'text') {
+        
+        $('.checkbox').addClass('show');
+        $('#password').attr('type', 'text');
+        
+    } else {
+        
+        $('.checkbox').removeClass('show');
+        $('#password').attr('type', 'password');
+        
+    }
+}
+</script>
+
+    <script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<!-- Boostrap -->
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<!-- Jquery Parallax -->
+	<script src="js/vendor/parallax.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/vendor/jquery-ui.min.js"></script>
+	<!-- jQuery Sticky -->
+	<script src="js/vendor/jquery.sticky.js"></script>
+	<!-- OWL CAROUSEL Slider -->
+	<script src="js/vendor/owl.carousel.js"></script>
+	<!-- PrettyPhoto -->
+	<script src="js/vendor/jquery.prettyPhoto.js"></script>
+	<!-- Jquery Isotope -->
+	<script src="js/vendor/isotope.pkgd.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+    <script src="js/angularjs/school.studentservice.js"></script>
+	<script src="js/angularjs/school.route.js"></script>
+	<script src="js/angularjs/school.studentcontroller.js"></script>
+
+</body>
+</html>

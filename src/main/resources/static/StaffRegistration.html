@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>NEC Nellore | MCA Department</title>
+
+<script type="text/javascript">
+       function validateForm(){
+       var iDno = document.myForm.idno.value;
+       var p1 = document.myForm.password.value;
+       var p2 = document.myForm.password2.value;
+    	   if(iDno.length<10){
+		       alert("Enter 10 digit ID number only");
+		       return false;
+	       }
+    	   else if(iDno.length>10){
+		       alert("Enter 10 digit ID number only");
+		       return false;
+	       }
+    	   else if(p1 != p2){
+		       alert("Please enter same password");
+		       return false;
+	       }
+	       else{
+	    	   return true;
+	       }
+       }
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!-- Responsive CSS -->
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png"
+	href="images/assets/favicon.png" />
+	
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+</head>
+
+<body data-ng-app="schoolApp" data-ng-controller="MainController">
+
+	<div id="pageloader">
+		<div class="pageloader">
+			<div class="thecube">
+				<div class="cube c1"></div>
+				<div class="cube c2"></div>
+				<div class="cube c4"></div>
+				<div class="cube c3"></div>
+			</div>
+
+			<div class="textedit">
+				<span class="site-name">NEC Nellore | MCA Department</span>
+				<span class="site-tagline">2014-17 Batch creation</span>
+			</div>	
+		</div><!-- .pageloader -->
+	</div><!-- #pageloader -->
+
+	<div id="wrapper">
+		<header id="header" class="site-header">
+			
+			<div class="mid-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-8">
+							<div class="site-brand">
+								<a class="logo" href="#">
+									<img src="images/assets/logo.png" alt="Universum" />
+								</a>
+							</div><!-- .site-brand -->
+						</div>
+
+						<div class="col-md-8 col-sm-4 col-xs-2">
+							<nav class="main-menu">
+								<span class="mobile-btn"><i class="fa fa-bars"></i></span>
+								<ul align="left">
+									<li><a href="StudentRegistration.html">Student Sign Up</a></li>
+									
+									<li class="current-menu-item"><a href="StaffRegistration.html">Staff Sign Up</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-md-1 col-sm-2 col-xs-2">
+					    <nav class="main-menu">
+					       <ul>
+								<span class="mobile-btn"><i class="fa fa-bars"></i></span>
+						        <li ><a href="Stafflogin.html"><span class="glyphicon glyphicon-log-in">.Login</span></a></li>
+					             
+					       </ul>
+					   </nav>
+					   </div>
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .mid-header -->
+		</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+			<div class="page-title parallax-window" data-parallax="scroll" data-image-src="images/placeholder/blog-title.jpg">
+				<div class="container">
+					<h2>Staff Sign Up</h2>
+					<div class="breadcrumb">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><span class="current">Staff Sign Up</span></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- .page-title -->
+			
+			<div class="container text-center">
+				<div class="row">
+					<main id="main" class="site-main col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="shipping-fields">
+							
+		     <div class="jumbotron">
+				<form name="myForm" role="form" class="form-inline" onsubmit="return validateForm()">
+					
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="staffName"><h4>Staff Name :</h4></label> </div>
+					<div class="col-md-6" data-ng-class="{'has-error':!myForm.staffName.$valid}">
+						<input type="text" name="staffName" data-ng-minlength="2" data-ng-maxlength="50" required 
+						    class="form-control input-md" id="staffName" data-ng-model="staffForm.staffName" placeholder="staff name">
+						    
+					    <p data-ng-show="myForm.staffName.$error.minlength">Staff name is too short</p>
+						<p data-ng-show="myForm.staffName.$error.maxlength">Staff name is too long</p>
+						<p data-ng-show="myForm.staffName.$error.required"></p>
+					</div>
+					</div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				    <div class="row">
+					<div class="col-md-6 control-label" align="right"> <label for="idno"><h4>ID Number :</h4></label> </div>
+					<div class="col-md-6" data-ng-class="{'has-error':!myForm.idno.$valid}">
+						<input type="text" name="idno" data-ng-minlength="10" data-ng-maxlength="10" required
+							class="form-control input-md" id="idno" data-ng-model="staffForm.idno" placeholder="id number">
+							
+					    <p data-ng-show="myForm.idno.$error.minlength">Id number minimum 10 digits</p>
+						<p data-ng-show="myForm.idno.$error.maxlength">Id number maximum 10 digits</p>
+						<p data-ng-show="myForm.idno.$error.required"></p>
+					</div>
+					</div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				    <div class="row">
+					<div class="col-md-6 control-label" align="right"> <label for="password"><h4>Create Password :</h4></label> </div>
+					<div class="col-md-6" data-ng-class="{'has-error':!myForm.password.$valid}">
+						<input type="password" name="password" data-ng-minlength="6" data-ng-maxlength="8" required
+							class="form-control input-md" id="password" data-ng-model="staffForm.password" placeholder="password">
+							
+					    <p data-ng-show="myForm.password.$error.minlength">Password minimum 6 digits</p>
+						<p data-ng-show="myForm.password.$error.maxlength">Password maximum 8 digits</p>
+						<p data-ng-show="myForm.password.$error.required"></p>
+					</div>
+					</div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				    <div class="row">
+					<div class="col-md-6 control-label" align="right"> <label for="password2"><h4>Re-enter Password :</h4></label> </div>
+					<div class="col-md-6" data-ng-class="{'has-error':!myForm.password2.$valid}">
+						<input type="password" name="password2" data-ng-minlength="6" data-ng-maxlength="8" required
+							class="form-control input-md" id="password2" data-ng-model="staffForm.password2" placeholder="re-enter password">
+							
+						<p data-ng-show="myForm.password2.$error.minlength">Password minimum 6 digits</p>
+						<p data-ng-show="myForm.password2.$error.maxlength">Password maximum 8 digits</p>
+						<p data-ng-show="myForm.password2.$error.required"></p>
+					</div>
+					</div>
+				</div>
+				<br>
+					
+				<div class="form-group">
+						<label for="" class="col-log-2 control-label"></label>
+						<div class="col-log-3">
+							<button type="submit" class="btn btn-primary" data-ng-click="registerStaff(staffForm)" data-toggle="modal"
+								data-target="#modal-1">Register</button>
+						</div>
+				</div>
+				</form>
+		        </div>
+
+								</div><!-- .shipping-fields -->
+							</div>
+						</div><!-- .row -->
+					</main><!-- .site-main -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .site-content -->
+
+		<footer id="footer" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="copyright">
+							<p>Copyright © 2016 University. <a href="http://itcthemes.com/">ItcThemes.com</a></p>
+						</div><!-- .copyright -->
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<nav class="nav-footer">
+							<ul>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Disclaimer</a></li>
+								<li><a href="#">Feedback</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div><!-- .container -->
+		</footer><!-- .site-footer -->
+	</div><!-- #wrapper -->
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<!-- Boostrap -->
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<!-- Jquery Parallax -->
+	<script src="js/vendor/parallax.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/vendor/jquery-ui.min.js"></script>
+	<!-- jQuery Sticky -->
+	<script src="js/vendor/jquery.sticky.js"></script>
+	<!-- OWL CAROUSEL Slider -->
+	<script src="js/vendor/owl.carousel.js"></script>
+	<!-- PrettyPhoto -->
+	<script src="js/vendor/jquery.prettyPhoto.js"></script>
+	<!-- Jquery Isotope -->
+	<script src="js/vendor/isotope.pkgd.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+    <script src="js/angularjs/school.studentservice.js"></script>
+	<script src="js/angularjs/school.route.js"></script>
+	<script src="js/angularjs/school.studentcontroller.js"></script>
+
+</body>
+</html>

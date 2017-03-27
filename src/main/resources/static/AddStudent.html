@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>NEC Nellore | MCA Department</title>
+	
+<script type="text/javascript">
+       function validateForm(){
+       var rollno = document.myForm.studRoll.value;
+       var phone = document.myForm.mobile.value;
+       var x = document.forms["myForm"]["email"].value;
+       var atpos = x.indexOf("@");
+       var dotpos = x.lastIndexOf(".");
+       	   
+    	   if(rollno.length<10){
+		       alert("Enter 10 digit Roll number only");
+		       return false;
+	       }
+    	   else if(rollno.length>10){
+		       alert("Enter 10 digit Roll number only");
+		       return false;
+	       }
+    	   else if(phone.length<10){
+		       alert("Enter 10 digit mobile number");
+		       return false;
+	       }
+    	   else if(phone.length>10){
+		       alert("Enter 10 digit mobile number");
+		       return false;
+	       }
+    	   else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+          		alert("Not a valid e-mail address");
+                return false;
+      	   }
+	       else{
+	    	    return true;
+	       }
+       }
+</script>
+	
+	<!-- Style CSS -->
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!-- Responsive CSS -->
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png"
+	href="images/assets/favicon.png" />
+	
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/ie9/html5shiv.min.js"></script>
+      <script src="js/ie9/respond.min.js"></script>
+    <![endif]-->
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body class="shopping-cart" data-ng-app="schoolApp" data-ng-controller="MainController">
+	<div id="pageloader">
+		<div class="pageloader">
+			<div class="thecube">
+				<div class="cube c1"></div>
+				<div class="cube c2"></div>
+				<div class="cube c4"></div>
+				<div class="cube c3"></div>
+			</div>
+
+			<div class="textedit">
+				<span class="site-name">NEC Nellore | MCA Department</span>
+				<span class="site-tagline">2014-17 Batch creation</span>
+			</div>	
+		</div><!-- .pageloader -->
+	</div><!-- #pageloader -->
+
+	<div id="wrapper">
+		<header id="header" class="site-header">
+			
+			<div class="mid-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-8">
+							<div class="site-brand">
+								<a class="logo" href="#">
+									<img src="images/assets/logo.png" alt="Universum" />
+								</a>
+							</div><!-- .site-brand -->
+						</div>
+
+						<div class="col-md-8 col-sm-4 col-xs-2">
+							<nav class="main-menu">
+								<span class="mobile-btn"><i class="fa fa-bars"></i></span>
+								<ul>
+									<li class="current-menu-item"><a href="#">Students</a>
+									    <ul class="sub-menu">
+									        <li class="current-menu-item"><a href="AddStudent.html">Add Student</a></li>
+										    <li><a href="UpdateStudent.html">Update Student</a></li>
+										    <li><a href="DeleteStudent.html">Delete Student</a></li>
+										    <li> </li>
+											<li><a href="StudentDetails.html">View Student List</a></li>
+									                    
+										</ul>
+									</li>
+									<li><a href="#">Staff</a>
+										<ul class="sub-menu">
+										    <li><a href="AddStaff.html">Add Staff</a></li>
+										    <li><a href="UpdateStaff.html">Update Staff</a></li>
+										    <li><a href="DeleteStaff.html">Delete Staff</a></li>
+										    <li> </li>
+										    <li><a href="StaffDetails.html">View Staff details</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Alumni Students</a>
+										<ul class="sub-menu">
+											<li><a href="AlumniStudents.html">View Alumni Students</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Results</a>
+										<ul class="sub-menu">
+											<li><a href="AddMidExamResults.html">Add Mid Exam Results</a></li>																					
+											<li> </li>
+											<li><a href="MidResults.html">View Mid Exam Results</a></li>
+										</ul>
+									</li>
+									<!-- <li><a href="404.html">404</a></li> -->
+									<li><a href="#">Notifications</a>
+									   <ul class="sub-menu">
+									        <li><a href="AddNotifications.html">Add Notifications</a></li>
+									        <li> </li>
+									        <li><a href="StudentNotifications.html">View Student Notifications</a></li>
+									        <li><a href="StaffNotifications.html">View Staff Notifications</a></li>
+									   </ul>
+									</li>
+									<li><a href="#">Timetable</a>
+									   <ul class="sub-menu">
+									        <li><a href="AddTimetable.html">Add Timetable</a></li>
+									        <li> </li>
+									        <li><a href="Timetable.html">View Timetable</a></li>
+									   </ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-md-1 col-sm-2 col-xs-2">
+					    <nav class="main-menu">
+					       <ul>
+								<span class="mobile-btn"><i class="fa fa-bars"></i></span>
+					            <li><a href="index2.html"><span class="glyphicon glyphicon-log-out">Logout</span></a></li>
+					             
+					       </ul>
+					   </nav>
+					   </div>
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .mid-header -->
+		</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+			<div class="page-title parallax-window" data-parallax="scroll" data-image-src="images/placeholder/blog-title.jpg">
+				<div class="container">
+					<h2>Adding New Student</h2>
+					<div class="breadcrumb">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><span class="current">AddStudent</span></li>
+						</ul>
+					</div><!-- .breadcrumb -->
+				</div><!-- .container -->
+			</div><!-- .page-title -->
+			
+			<div class="container text-center">
+			
+			<div class="jumbotron">
+
+			<form name="myForm" role="form" class="form-inline" onsubmit="return validateForm()">
+				
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="studRoll"><h3>Roll no. :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <input type="text" name="studRoll" required class="form-control input-md" id="studRoll"
+								data-ng-model="adminstudentForm.studRoll" placeholder="Roll Number"></h4>
+				    </div>
+					     <span data-ng-show="myForm.studRoll.$touched && myForm.studRoll.$invalid">Roll No. is required.</span>
+				    </div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="studName"><h3>Name :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <input type="text" name="studName" required class="form-control input-md" id="studName"
+								data-ng-model="adminstudentForm.studName" placeholder="Name"></h4>
+				    </div>
+					     <span data-ng-show="myForm.studName.$touched && myForm.studName.$invalid">Name is required.</span>
+				    </div>
+				</div>
+				<br>
+				
+				<!-- <div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="gender" ><h3>Gender :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <select id="gender" required class="form-control input-md" data-ng-model="adminstudentForm.gender"  
+							data-ng-options="x for x in addGender">
+				            <option value="" selected="selected">Select Gender</option></select></h4>				                         
+				    </div>
+					     <span data-ng-show="myForm.gender.$touched && myForm.gender.$invalid">Gender is required.</span>
+				    </div>
+				</div>
+				<br> -->
+				
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="batch"><h3>Batch :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <select id="batch" required class="form-control input-md" data-ng-model="adminstudentForm.batch"  
+						         data-ng-options="x for x in addBatch">
+				                 <option value="" selected="selected">Select Batch</option> </select></h4>
+				                         
+				    </div>
+					     <span data-ng-show="myForm.batch.$touched && myForm.batch.$invalid">Batch is required.</span>
+				    </div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="mobile"><h3>Mobile :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <input type="number" name="mobile" required class="form-control input-md" 
+								id="mobile" data-ng-model="adminstudentForm.mobile" placeholder="Mobile"></h4>
+				                         
+				    </div>
+					     <span data-ng-show="myForm.mobile.$touched && myForm.mobile.$invalid">Mobile is required.</span>
+				    </div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+				   <div class="row">
+				    <div class="col-md-6 control-label" align="right"> <label for="email"><h3>E-Mail :</h3></label> </div>
+					<div class="col-md-6">
+				    <h4> <input type="text" name="email" required class="form-control input-md" id="email"
+											data-ng-model="adminstudentForm.email" placeholder="name@gmail.com"></h4>
+				                         
+				    </div>
+					     <span data-ng-show="myForm.email.$touched && myForm.email.$invalid">E-Mail is required.</span>
+				    </div>
+				</div>
+				<br>
+				
+				<div class="form-group">
+						<label for="" class="col-log-2 control-label"></label>
+						<div class="col-log-2">
+						 <button type="submit" class="control-label btn btn-info btn-md" data-ng-disabled="!myForm.$valid"
+						   data-ng-click="registerAdminstudent(adminstudentForm)" data-toggle="modal" data-target="#modal-1">Add Student</button>
+						</div>
+	            </div>
+			</form>
+
+		</div>
+
+			</div><!-- .container -->
+		</div><!-- .site-content -->
+
+		<div id="bottom" class="site-bottom">
+			<div class="container">
+				<div class="footer-widget bottom1">
+					<div class="row">
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">About JNTUA</h3>
+								<div class="text-widget">
+									<p>Jawaharlal Nehru Technological University, Anantapur is a state university in Anantapur, Andhra Pradesh, India.<br>
+                                       <b><u>Address:</u></b> Saradha Nagar, Anantapur, Andhra Pradesh 515002<br> <b><u>Phone:</u></b> 085542 72438<br> <b><u>Founded:</u></b> 1946</p>
+								</div>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">All Courses</h3>
+								<ul>
+									<li>PG Studies</li>
+									<li>M. Tech</li>
+									<li>B. Tech</li>
+								</ul>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">Our Socials</h3>
+								<p>Follow our sosials in facebook and twitter </p>
+								<div class="socials">
+									<ul>
+										<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									</ul>
+								</div>
+							</div><!-- .widget -->
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="widget contact-widget">
+								<h3 class="widget-title">Contact Us</h3>
+								<ul>
+									<li class="address">Off NH-5, Muthukur Road, A.K. Nagar, Near Apollo Hospital, Nellore, Andhra Pradesh 524004</li>
+									<li class="mobile">0861 231 3843</li>
+									<li class="email">narayananec@gmail.com</li>
+									<li class="time-work">Mon - Sat :- 9.00 am - 4.00 pm</li>
+								</ul>
+							</div><!-- .widget -->
+						</div>
+					</div>
+				</div><!-- .bottom1 -->
+				
+			</div><!-- .container -->
+		</div><!-- .site-bottom -->
+
+		<footer id="footer" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="copyright">
+							<p>Copyright © 2016 University.</p>
+						</div><!-- .copyright -->
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<nav class="nav-footer">
+							<ul>
+								<!-- <li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Disclaimer</a></li> -->
+								<li><a href="#">Feedback</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div><!-- .container -->
+		</footer><!-- .site-footer -->
+	</div><!-- #wrapper -->
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+ 	
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<!-- Boostrap -->
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<!-- Jquery Parallax -->
+	<script src="js/vendor/parallax.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/vendor/jquery-ui.min.js"></script>
+	<!-- jQuery Sticky -->
+	<script src="js/vendor/jquery.sticky.js"></script>
+	<!-- OWL CAROUSEL Slider -->
+	<script src="js/vendor/owl.carousel.js"></script>
+	<!-- PrettyPhoto -->
+	<script src="js/vendor/jquery.prettyPhoto.js"></script>
+	<!-- Jquery Isotope -->
+	<script src="js/vendor/isotope.pkgd.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+    <script src="js/angularjs/school.studentservice.js"></script>
+	<script src="js/angularjs/school.route.js"></script>
+	<script src="js/angularjs/school.studentcontroller.js"></script>
+	
+</body>
+</html>
